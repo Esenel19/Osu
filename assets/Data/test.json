@@ -1,0 +1,100 @@
+{
+    "easy": [
+      {
+        "name": "alexis", 
+        "point": 11000,
+        "score": 10542, 
+        "miss": "nbcircle", 
+        "accuracy": "accurate"
+      },
+      {
+        "name": "sven", 
+        "point": 9001,
+        "score": 8569, 
+        "miss": "nbcircle", 
+        "accuracy": "accurate"
+      },
+      {
+        "name": "duane", 
+        "point": 666666,
+        "score": 420420, 
+        "miss": "nbcircle", 
+        "accuracy": "accurate"
+      },
+      {
+        "name": "elodie", 
+        "point": 0,
+        "score": 0, 
+        "miss": "nbcircle", 
+        "accuracy": "accurate"
+      }
+    ],
+    "intermediaire": [
+      {
+        "name": "Molecule Man",
+        "age": 29,
+        "secretIdentity": "Dan Jukes",
+        "powers": [
+          "Radiation resistance",
+          "Turning tiny",
+          "Radiation blast"
+        ]
+      },
+      {
+        "name": "Madame Uppercut",
+        "age": 39,
+        "secretIdentity": "Jane Wilson",
+        "powers": [
+          "Million tonne punch",
+          "Damage resistance",
+          "Superhuman reflexes"
+        ]
+      },
+      {
+        "name": "Eternal Flame",
+        "age": 1000000,
+        "secretIdentity": "Unknown",
+        "powers": [
+          "Immortality",
+          "Heat Immunity",
+          "Inferno",
+          "Teleportation",
+          "Interdimensional travel"
+        ]
+      }
+    ],
+    "hard": [
+      {
+        "name": "Molecule Man",
+        "age": 29,
+        "secretIdentity": "Dan Jukes",
+        "powers": [
+          "Radiation resistance",
+          "Turning tiny",
+          "Radiation blast"
+        ]
+      },
+      {
+        "name": "Madame Uppercut",
+        "age": 39,
+        "secretIdentity": "Jane Wilson",
+        "powers": [
+          "Million tonne punch",
+          "Damage resistance",
+          "Superhuman reflexes"
+        ]
+      },
+      {
+        "name": "Eternal Flame",
+        "age": 1000000,
+        "secretIdentity": "Unknown",
+        "powers": [
+          "Immortality",
+          "Heat Immunity",
+          "Inferno",
+          "Teleportation",
+          "Interdimensional travel"
+        ]
+      }
+    ]
+  }

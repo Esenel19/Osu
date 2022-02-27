@@ -1,0 +1,147 @@
+.music-page {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  height: 100vh;
+  width: 600px;
+  /* background-color: rgb(28, 28, 28); */
+  border-left: solid 1px #814e56;
+  z-index: 5;
+  transform: translate(100%, 0px);
+  transition: 1s;
+  overflow: auto;
+  background-image: url("../images/musicPage-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.music-page-active {
+  transform: translate(0%, 0px);
+  transition: 1s;
+}
+.arrow {
+  position: absolute;
+  top: 55%;
+  right: 3%;
+  height: 50px;
+  width: 50px;
+  background: rgb(44, 44, 44);
+  border: solid 1px #c79d50;
+  z-index: 5;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 1s;
+}
+.arrow:hover {
+  background-color: rgba(82, 82, 82, 0.7);
+}
+.activator-active {
+  transform: translate(-30vw, 0px);
+  transition: 1s;
+  z-index: 1;
+}
+.arrow .line1 {
+  width: 25px;
+  transform: rotate(0deg) translate(13px, 24px);
+  animation: changingBgColor 10s infinite;
+  height: 2px;
+}
+.arrow .line2 {
+  width: 20px;
+  transform: rotate(45deg) translate(27px, 13px);
+  animation: changingBgColor 10s infinite;
+  height: 2px;
+  transition: 1s;
+}
+.arrow .line3 {
+  width: 20px;
+  transform: rotate(-45deg) translate(-3px, 17px);
+  animation: changingBgColor 10s infinite;
+  height: 2px;
+  transition: 1s;
+}
+.activator-active .line2 {
+  transform: rotate(45deg) translate(24px, -3px);
+  transition: 1s;
+}
+.activator-active .line3 {
+  transform: rotate(-45deg) translate(-4px, 33px);
+  transition: 1s;
+}
+.music-remover {
+  top: 0;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  display: none;
+}
+.music-activate {
+  display: initial;
+}
+.remove-arrow {
+  display: none;
+}
+.librairy {
+    color: white;
+    font-size: 35px;
+    margin-top: 30px;
+    font-style: italic;
+    text-decoration: underline;
+}
+.music1-pageMusic,
+.music2-pageMusic,
+.music3-pageMusic,
+.music4-pageMusic,
+.music5-pageMusic {
+  width: 99%;
+  height: 25vh;
+  font-size: 27px;
+  display: block;
+  text-align: center;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+.music1-pageMusic p,
+.music2-pageMusic p,
+.music3-pageMusic p,
+.music4-pageMusic p,
+.music5-pageMusic p {
+  color: white;
+}
+.info-music {
+  height: 83%;
+  width: 86%;
+  border-bottom: solid white 1px;
+  border-right: solid white 1px;
+  border-radius: 10px;
+  margin-left: 40px;
+  background: rgb(47 95 109 / 86%);
+}
+.music-info {
+  font-size: 20px;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.music-info div {
+  width: 50%;
+}
+audio {
+  margin-top: 20px;
+  width: 400px;
+  height: 25px;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(149 194 208 / 86%);
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(47 95 109 / 86%);;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(32 64 74 / 86%);
+}

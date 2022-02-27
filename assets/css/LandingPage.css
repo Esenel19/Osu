@@ -1,0 +1,198 @@
+.landing-page {
+  transition: 3s;
+  height: 78vh;
+  width: 100%;
+  background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0) 70%,
+      rgba(44, 44, 44, 1) 100%
+    ),
+    url(../images/background-result.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 220px;
+  color: white;
+  transform: translate(0px, 0%);
+  z-index: 1;
+}
+.remove-landing-page {
+  transition: 3s;
+  transform: translate(0px, 100%);
+}
+.start {
+  height: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 50px;
+}
+.start-button {
+  background-color: rgb(44 44 44);
+  padding: 30px 100px 30px 100px;
+  border-radius: 10px;
+  border: solid 1px #67c19d;
+  cursor: pointer;
+  animation: changingTxtColor 10s infinite;
+}
+.start-button:hover,
+#music-selector:hover {
+  background-color: rgb(54 54 54);
+}
+.level {
+  height: 470px;
+  width: 100vw;
+}
+.difficulty {
+  font-size: 30px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.first-floor-level,
+.second-floor-level {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  height: 220px;
+}
+.first-floor-level p,
+.second-floor-level p {
+  border-radius: 10px;
+  border: solid 1px rgb(77 145 159);
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+  height: 70px;
+  font-size: 28px;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.second-floor-level div {
+  width: 220px;
+}
+.active {
+  background-color: rgb(209, 27, 255);
+}
+
+.custom-selector {
+  display: none;
+}
+.time-selector {
+  position: absolute;
+  top: 72%;
+  left: 28%;
+}
+.time-selector p {
+  font-size: 25px;
+}
+.parameters-selector {
+  position: absolute;
+  top: 67%;
+  left: 5.5%;
+  width: 430px;
+  height: 300px;
+}
+.first-two-param,
+.last-two-param {
+  height: 100px;
+  display: flex;
+}
+.size-radius,
+.apparition-circle-visible,
+.lines-visible,
+.other,
+.lineapp,
+.clickmouse {
+  width: 200px;
+  height: 100px;
+  display: block;
+  justify-content: center;
+  border: solid 1px green;
+  background-color: rgba(44, 44, 44, 1);
+  margin-left: 10px;
+  border-radius: 10px;
+}
+.last-two-param div,
+.last-two-param button {
+  margin-top: 12px;
+}
+.apparition {
+  position: absolute;
+  left: 60%;
+}
+button {
+  color: white;
+  font-size: 30px;
+}
+.first-two-param p,
+.last-two-param p {
+  text-align: center;
+}
+.choosing-radius {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+.first-two-param select {
+  border: 1px #bb6d76 solid;
+  border-radius: 10px;
+  background-color: rgba(44, 44, 44, 1);
+  color: white;
+  height: 40px;
+  width: 80px;
+  font-size: 25px;
+}
+.custom-selector-active {
+  display: initial;
+}
+.follow-point {
+  position: absolute;
+  top: 34%;
+  left: 15%;
+}
+#selected-timer {
+  height: 70px;
+  width: 70px;
+  font-size: 30px;
+  border-radius: 10px;
+  color: white;
+  background-color: rgba(44, 44, 44, 1);
+  text-align: center;
+}
+.click-mouse {
+  position: absolute;
+  top: 34%;
+  left: 53%;
+  font-size: 15px;
+}
+#myAudio {
+  display: none;
+}
+#music-selector {
+  position: absolute;
+  top: 77%;
+  left: 78.2%;
+  width: 200px;
+  height: 70px;
+  font-size: 28px;
+  background-color: rgba(44, 44, 44, 1);
+  color: white;
+  border-radius: 10px;
+  border: solid 1px #784662;
+  padding: 10px;
+  cursor: pointer;
+}
+#music-selector option {
+  background-color: rgba(44, 44, 44, 1);
+}
+.active:hover {
+  background-color: rgb(209, 27, 255);
+}

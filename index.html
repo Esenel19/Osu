@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>OsuInjs</title>
+    <meta name="description" content="Osu" />
+    <meta name="author" content="Osute" />
+    <link rel="shortcut icon" href="../assets/images/logo_ozut.png" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/LandingPage.css" />
+    <link rel="stylesheet" href="../assets/css/resultPage.css" />
+    <link rel="stylesheet" href="../assets/css/MusicPage.css" />
+    <link rel="stylesheet" href="../assets/css/informationPage.css" />
+  </head>
+
+  <body>
+    <div class="Page">
+      <!-- ===============================
+                PAGE DU JEU
+      =============================== -->
+      <div class="header">
+        <img src="../assets/images/logo_ozut.png" />
+        <div class="title">
+          <h1>Ozut!</h1>
+        </div>
+        <div class="sub-title">
+          <h2>A much better game than the original</h2>
+        </div>
+      </div>
+      <!-- Define the canvas -->
+      <div class="canv" id="canv">
+        <canvas
+          id="canvas"
+          width="700"
+          height="400"
+          style="border: 1px solid lightgrey"
+        >
+          Your browser does not support the HTML5 canvas tag.
+        </canvas>
+      </div>
+
+      <div class="game-result">
+        <div class="result">
+          <p>Points :</p>
+          <p class="point">0</p>
+        </div>
+        <div class="numberCircle">
+          <p>Number of circle :&nbsp;</p>
+          <p class="circle">0</p>
+        </div>
+        <div class="accuracy">
+          <p>Accuracy :&nbsp;</p>
+          <p class="percent">0</p>
+        </div>
+      </div>
+
+      <div class="instructions">
+        <h3 class="instruction-title">Instructions</h3>
+        <ul>
+          <li>Press Z, E or LButton while aiming a circle</li>
+          <li>When the timer reached 0, the game is over</li>
+          <li>
+            If 20 or more circles appeared and you have less than 25% accuracy,
+            you loose.
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="timer">Timer</p>
+        <div class="time">
+          <p id="time">0</p>
+        </div>
+      </div>
+      <div>
+        <p class="fps-write">FPS</p>
+        <div class="fps">
+          <p id="fps">0</p>
+        </div>
+      </div>
+
+      <div class="max-point">
+        <p class="top-score">Top Score :</p>
+        <div>
+          <p class="max-point-printed"></p>
+        </div>
+      </div>
+      <div class="score-text">
+        <p>Only on Hard or Nightmare mods</p>
+      </div>
+      <div title="Kai Engel - Marée">
+        <img
+          class="bouton-song"
+          id="note"
+          src="../assets/images/note-false.png"
+        />
+      </div>
+      <div class="icon" title="Game Instructions">
+        <img class="rules-icon" id="rules" src="assets/images/rules-icon.png" />
+      </div>
+
+      <div class="key-image">
+        <img src="assets/images/clic-gauche.png" id="clic-gauche">
+        <img src="assets/images/Z-key.png" id="Z-key">
+        <img src="assets/images/E-key.png" id="E-key">
+      </div>
+
+
+      <!-- ===============================
+                PAGE D'ARRIVEE
+      =============================== -->
+      <div class="landing-page">
+        <div class="level">
+          <div class="difficulty">
+            <h3>Choose the level</h3>
+          </div>
+          <div class="all-level">
+            <div class="first-floor-level">
+              <div class="easy">
+                <p class="easy-button">Easy</p>
+              </div>
+              <div class="intermediate">
+                <p class="intermediate-button active">Intermediate</p>
+              </div>
+              <div class="hard">
+                <p class="hard-button">Hard</p>
+              </div>
+            </div>
+            <div class="second-floor-level">
+              <div class="custom">
+                <p class="custom-button">Custom</p>
+              </div>
+              <div></div>
+              <div class="nightmare">
+                <p class="nightmare-button">Nightmare</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="start">
+          <div class="start-button">Start</div>
+          <div class="start-button-bis">Start</div>
+        </div>
+
+        <div class="custom-selector">
+          <div class="time-selector">
+            <p>timer</p>
+            <input type="number" id="selected-timer" value="60" />
+          </div>
+          <div class="parameters-selector">
+            <div class="first-two-param">
+              <div class="size-radius">
+                <p>Circles Size</p>
+                <div class="choosing-radius">
+                  <select id="circle-size">
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="30" selected>30</option>
+                    <option value="40">40</option>
+                    <option value="50">50</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <button
+                  class="apparition-circle-visible"
+                  type="button"
+                  id="on/off"
+                >
+                  on
+                </button>
+              </div>
+              <div class="apparition">Approach circles</div>
+            </div>
+            <div class="last-two-param">
+              <button class="lineapp" type="button" id="lineapp">on</button>
+              <div class="follow-point">Follow points</div>
+
+              <button class="clickmouse" type="button" id="clickmouse">
+                on
+              </button>
+              <div class="click-mouse">Press Z on left, E on right</div>
+            </div>
+          </div>
+        </div>
+        <audio id="myAudio" src="../assets/audio/music1.mp3" controls></audio>
+        <select id="music-selector">
+          <option value="0">No Music</option>
+          <option value="1" selected>Music 1</option>
+          <option value="2">Music 2</option>
+          <option value="3">Music 3</option>
+          <option value="4">Music 4</option>
+          <option value="5">Music 5</option>
+        </select>
+      </div>
+
+      <!-- ===============================
+              PAGE DE RESULTAT
+      =============================== -->
+      <div class="result-page">
+        <h3 class="well-played-or-not">Well Played !</h3>
+        <div class="scoreboard">
+          <h4>Scoreboard :</h4>
+        </div>
+        <div class="all-result">
+          <div class="result" id="point-result-page">
+            <p>Points :</p>
+            <p class="point-result">0</p>
+          </div>
+          <div class="scoring" id="scoring">
+            <p>Score :</p>
+            <p class="scoring-number">0</p>
+            <div class="score-information">
+              <p id="calcul">points x (accuracy/100) x multiplier</p>
+              <p>
+                Easy/Custom : 0.8<br />Intermediate : 1<br />
+                Hard : 1.25<br />
+                Nightmare : 1.75
+              </p>
+            </div>
+          </div>
+          <div class="accuracy" id="accuracy-result-page">
+            <p>Accuracy :</p>
+            <p class="percent" id="percent-result-page">0</p>
+          </div>
+        </div>
+        <div class="restart">
+          <div class="button">Restart</div>
+        </div>
+        <div class="result-level">
+          <div class="level-printed">
+            <p>Intermediate</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===============================
+              PAGE DE LA MUSIQUE
+      =============================== -->
+      <div class="arrow">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+
+      <div class="music-remover"></div>
+
+      <div class="music-page">
+        <div class="librairy">
+          <h3>Audio library</h3>
+        </div>
+        <div class="music1-pageMusic">
+          <div class="info-music">
+            <p>Music 1</p>
+            <div class="music-info">
+              <div>
+                <p>Top Score :</p>
+                <p class="music1-score">0</p>
+              </div>
+            </div>
+            <div class="lecteur-audio">
+              <audio
+                id="music1-musicPage"
+                src="/assets/audio/music1.mp3"
+                controls
+              ></audio>
+            </div>
+          </div>
+        </div>
+        <div class="music2-pageMusic">
+          <div class="info-music">
+            <p>Music 2</p>
+            <div class="music-info">
+              <div>
+                <p>Top Score :</p>
+                <p class="music2-score">0</p>
+              </div>
+            </div>
+            <div class="lecteur-audio">
+              <audio
+                id="music2-musicPage"
+                src="/assets/audio/music2.mp3"
+                controls
+              ></audio>
+            </div>
+          </div>
+        </div>
+        <div class="music3-pageMusic">
+          <div class="info-music">
+            <p>Music 3</p>
+            <div class="music-info">
+              <div>
+                <p>Top Score :</p>
+                <p class="music3-score">0</p>
+              </div>
+            </div>
+            <div class="lecteur-audio">
+              <audio
+                id="music3-musicPage"
+                src="/assets/audio/music3.mp3"
+                controls
+              ></audio>
+            </div>
+          </div>
+        </div>
+        <div class="music4-pageMusic">
+          <div class="info-music">
+            <p>Music 4</p>
+            <div class="music-info">
+              <div>
+                <p>Top Score :</p>
+                <p class="music4-score">0</p>
+              </div>
+            </div>
+            <div class="lecteur-audio">
+              <audio
+                id="music4-musicPage"
+                src="/assets/audio/music4.mp3"
+                controls
+              ></audio>
+            </div>
+          </div>
+        </div>
+        <div class="music5-pageMusic">
+          <div class="info-music">
+            <p>Music 5</p>
+            <div class="music-info">
+              <div>
+                <p>Top Score :</p>
+                <p class="music5-score">0</p>
+              </div>
+            </div>
+            <div class="lecteur-audio">
+              <audio
+                id="music5-musicPage"
+                src="/assets/audio/music5.mp3"
+                controls
+              ></audio>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===============================
+            PAGE D'INFORMATION DU JEU
+      =============================== -->
+      <div class="info-page">
+        <img class="info-logo" src="assets/images/logo_ozut.png">
+        <p class="info-title">Welcome to Ozut! game rules.</p>
+        <p class="info-sub-title">
+          Here you will find everything you need to understand the game.
+        </p>
+        <p class="info-start">Let's Start !</p>
+        <div class="info-swip">
+          <div class="info-container">
+            <div class="Slide">
+              <div class="slide1-title">
+                <p>First step :<br />Choose the level</p>
+              </div>
+              <div class="slide1-instruction">
+                <p>
+                  There is 5 different level, easy, intermediate, hard,
+                  nightmare and custom
+                </p>
+              </div>
+              <div class="each-level">
+                <div class="easy-level">
+                  <h3 id="green">Easy</h3>
+                  <ul>
+                    <li>For the noobs</li>
+                    <li>Circles are big</li>
+                    <li>Apparition circles and lines are ON</li>
+                    <li>Top score disabled</li>
+                  </ul>
+                </div>
+                <div class="intermediate-level">
+                  <h3 id="blue">Intermediate</h3>
+                  <ul>
+                    <li>Good for training</li>
+                    <li>Circles have a medium size</li>
+                    <li>Apparition circles and lines are ON</li>
+                    <li>Top score disabled</li>
+                  </ul>
+                </div>
+                <div class="hard-level">
+                  <h3 id="orange">Hard</h3>
+                  <ul>
+                    <li>For a little challenge</li>
+                    <li>Circles have a small size</li>
+                    <li>Apparition circles are ON, Apparition lines are OFF</li>
+                    <li>Top score enabled</li>
+                  </ul>
+                </div>
+                <div class="nightmare-level">
+                  <h3 id="red">Nightmare</h3>
+                  <ul>
+                    <li>Now we can talk</li>
+                    <li>Circles are tiny</li>
+                    <li>Apparition circles and lines are OFF</li>
+                    <li>Top score enabled</li>
+                  </ul>
+                </div>
+                <div class="custom-level">
+                  <h3 id="pink">Custom</h3>
+                  <ul>
+                    <li>Play as you want</li>
+                    <li>Top score disabled</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="Slide">
+              <div class="slide2-title">
+                <p>Second Step :<br />How to play</p>
+              </div>
+              <div class="slide2-instruction">
+                <!-- prettier-ignore -->
+                <p>The game duration will depend on the music you choose, expect on custom mod.</p>
+                <!-- prettier-ignore -->
+                <p>Once the game started, you must do the best score possible.</p>
+                <!-- prettier-ignore -->
+                <p>To do so, you'll have to click on the circles that appear on the screen</p>
+                <!-- prettier-ignore -->
+                <p>You can click with the following keys : 'E' and 'Z' or the left click</p>
+                <!-- prettier-ignore -->
+                <p>Be carefull, depending on the level, you cannot use all of them.</p>
+                <!-- prettier-ignore -->
+                <p>In nightmare level, 'Z' is the only key to press on the left and 'E' on the right</p>
+              </div>
+            </div>
+            <div class="Slide">
+              <div class="slide3-title">
+                <p>Third Step :<br />Endgame</p>
+              </div>
+              <div class="slide3-instruction">
+                <h3>The game can ends from two ways :</h3>
+                <div class="list-game-over">
+                  <div class="timer-out">
+                    <h3>End of timer</h3>
+                    <div class="timer-info">
+                      <p>You did it until the end !</p>
+                      <p>Your score will be printed.</p>
+                      <p>
+                        If you play in hard or nightmare, you can beat the top
+                        score.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="low-accuracy">
+                    <h3>Low accuracy</h3>
+                    <div class="accuracy-info">
+                      <p>You lost before the end !</p>
+                      <p>Your score will not be printed.</p>
+                      <p>
+                        Try again if you want to beat the top score.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+          </div>
+        </div>
+      </div>
+      <div class="info-page-remover"></div>
+    </div>
+  </body>
+  <script type="text/javascript" src="/assets/js/globalVariable.js"></script>
+  <script src="/assets/js/affichage.js"></script>
+  <script src="/assets/js/click.js"></script>
+  <script src="/assets/js/music.js"></script>
+  <script src="/assets/js/images.js"></script>
+  <script src="/assets/js/generation.js"></script>
+  <script src="/assets/js/isIntersect.js"></script>
+  <script src="/assets/js/Difficulty.js"></script>
+  <script src="/assets/js/appCircle&Line.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/start.js"></script>
+</html>

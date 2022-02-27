@@ -1,0 +1,178 @@
+.result-page {
+  height: 78vh;
+  width: 100%;
+  background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0) 70%,
+      rgba(44, 44, 44, 1) 100%
+    ),
+    url(../images/background-result.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 220px;
+  color: white;
+  transform: translate(0px, 100%);
+  transition: 3s;
+}
+
+.result-success {
+    transition: 3s cubic-bezier(0.05, 1.04, 0.74, 0.1);
+    transform: translate(0px, 0%);
+  }
+  .result-page h3 {
+    font-size: 50px;
+    height: 170px;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .scoreboard {
+    font-size: 30px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .result-page h4 {
+    background-color: rgb(44 44 44);
+    padding: 15px;
+    border: solid 1px #c5969c;
+    border-radius: 10px;
+  }
+  .all-result {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    font-size: 30px;
+  }
+#point-result-page,
+#accuracy-result-page {
+  background-color: rgb(44 44 44);
+  border-radius: 10px;
+  border: solid 1px #67c19d;
+  height: 100px;
+  width: 300px;
+  display: block;
+  align-items: center;
+  text-align: center;
+}
+#scoring {
+  background-color: rgb(44 44 44);
+  width: 500px;
+  font-size: 50px;
+  border-radius: 10px;
+  border: solid 1px #e3e59e;
+  text-align: center;
+}
+.scoring-number {
+  font-size: 70px;
+  animation: changingTxtColor 10s infinite;
+}
+.restart {
+  width: 100vw;
+  height: 200px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 50px;
+}
+.button {
+  background-color: rgb(44 44 44);
+  border-radius: 10px;
+  border: solid 1px rgb(77 145 159);
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 184px;
+  animation: changingBgColor 10s infinite;
+}
+.remove-result-page {
+  transition: 3s;
+  transform: translate(0px, 100%);
+}
+.result-level {
+  position: absolute;
+  top: 72%;
+  left: 7%;
+  font-size: 30px;
+}
+.level-printed {
+  background-color: rgba(44, 44, 44, 1);
+  width: 300px;
+  height: 100px;
+  border: 1px #bb6d76 solid;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.score-information {
+  position: absolute;
+  top: 44%;
+  font-size: 11px;
+  left: 63%;
+  background-color: white;
+  color: black;
+  padding: 8px;
+  border-radius: 10px;
+  display: none;
+  text-align: left;
+}
+#calcul {
+  font-style: italic;
+  font-size: 14px;
+}
+.scoring:hover .score-information{
+  display: initial;
+}
+.restart-pressed p, .restart-pressed .start .start-button {
+  background-color: transparent;
+}
+.start-button-bis {
+  z-index: 1;
+  display: none;
+  background-color: rgb(44 44 44);
+  padding: 30px 100px 30px 100px;
+  border-radius: 10px;
+  border: solid 1px #67c19d;
+  position: absolute;
+}
+.start-not-active {
+  display: initial;
+}
+
+@keyframes changingBgColor {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: blue;
+  }
+  75% {
+    background-color: green;
+  }
+  100% {
+    background-color: red;
+  }
+}
+@keyframes changingTxtColor {
+  0% {
+    color: green;
+  }
+  25% {
+    color: red;
+  }
+  50% {
+    color: yellow;
+  }
+  75% {
+    color: blue;
+  }
+  100% {
+    color: green;
+  }
+}

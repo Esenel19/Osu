@@ -1,0 +1,200 @@
+.info-page-remover {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background-color: rgb(44, 44, 44, 0.5);
+}
+.info-page-remover-active {
+  display: initial;
+}
+.info-page {
+  position: absolute;
+  height: 700px;
+  width: 1350px;
+  top: 15%;
+  left: 15%;
+  background-color: white;
+  z-index: 2;
+  display: none;
+  border-radius: 10px;
+  background-color: rgb(44, 44, 44);
+  background-image: url("../images/info-game-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  border: solid 1px blue;
+}
+.info-page-active {
+  display: initial;
+}
+.info-title {
+  font-size: 45px;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+.info-sub-title {
+  font-size: 17px;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+.info-start {
+  font-size: 30px;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: underline;
+}
+.info-swip {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.info-container {
+  height: 100%;
+  width: 85%;
+  border: 1px solid black;
+  position: relative;
+  background-color: rgb(44, 44, 44, 0.7);
+  overflow: hidden;
+  border: 1px yellow solid;
+}
+/* Hide the images by default */
+.Slide {
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+.slide1-title,
+.slide2-title,
+.slide3-title {
+  width: 100%;
+  margin-top: 20px;
+}
+.slide1-title p,
+.slide2-title p,
+.slide3-title p {
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+}
+.slide1-instruction {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+.each-level {
+  display: flex;
+  justify-content: space-evenly;
+}
+.each-level div {
+  height: 250px;
+  width: 180px;
+  margin: 10px;
+  margin-top: 20px;
+  background-color: rgb(44, 44, 44);
+  border-radius: 10px;
+  border: solid 1px #67c19d;
+}
+.each-level h3 {
+  border-bottom: #67c19d solid 1px;
+  padding-bottom: 10px;
+}
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.intermediate-level li,
+.easy-level li,
+.nightmare-level li,
+.custom-level li {
+  margin: 10px 0px 20px 25px;
+}
+.hard-level li {
+  margin: 10px 0px 10px 25px;
+}
+#green {
+  color: green;
+}
+#blue {
+  color: blue;
+}
+#orange {
+  color: orange;
+}
+#red {
+  color: red;
+}
+#pink {
+  color: pink;
+}
+.slide2-instruction {
+  margin-top: 40px;
+  text-align: center;
+}
+.slide2-instruction p {
+  margin-top: 20px;
+  font-size: 18px;
+}
+.slide2-instruction h3 {
+  margin-top: 20px;
+}
+.list-game-over {
+  display: flex;
+  margin-top: 40px;
+}
+.list-game-over h3 {
+  text-decoration: underline;
+}
+.timer-out,
+.low-accuracy {
+  width: 50%;
+}
+.timer-info,
+.accuracy-info {
+  text-align: center;
+  width: 100%;
+  margin-top: 40px;
+  height: 150px;
+}
+.timer-info p,
+.accuracy-info p {
+  margin-top: 20px;
+}
+.timer-out {
+  border-right: solid 1px white;
+}
+.info-logo {
+  position: absolute;
+  height: 150px;
+  margin: 20px;
+  margin-left: 30px;
+}
